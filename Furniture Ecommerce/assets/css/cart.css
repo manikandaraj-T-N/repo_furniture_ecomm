@@ -1,0 +1,150 @@
+/* Cart Panel */
+.cart-panel {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+}
+
+.cart-panel.open {
+  right: 0;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+}
+
+.cart-items {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.cart-item p {
+  margin: 0;
+}
+
+.cart-footer {
+  padding: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.close-cart{
+    background-color: var(--black);
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+
+.cart-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.cart-item img {
+  border-radius: 5px;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-actions {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+  align-items: center;
+}
+
+.cart-actions button {
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+
+.cart-actions button {
+  padding: 6px 12px;
+  margin: 0 4px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.cart-actions button:hover {
+  background-color: #b88e2f;
+  color: white;
+}
+
+.cart-actions button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Remove (🗑️) button */
+.cart-actions .remove {
+  background-color: #e97171;
+  color: white;
+}
+
+.cart-actions .remove:hover {
+  background-color: #c62828;
+}
+
+/* Footer Buttons */
+.cart-footer button {
+  padding: 10px 16px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-footer .btn-primary {
+  background-color: #2ec1ac;
+  color: white;
+}
+
+.cart-footer .btn-primary:hover {
+  background-color: #1ea790;
+}
+
+.cart-footer .btn-secondary {
+  background-color: #e97171;
+  color: white;
+  margin-left: 10px;
+}
+
+.cart-footer .btn-secondary:hover {
+  background-color: #c94444;
+}

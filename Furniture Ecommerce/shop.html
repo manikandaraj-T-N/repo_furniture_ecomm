@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | Furniture Store</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/css/cart.css">
+  <link rel="stylesheet" href="./assets/css/shop.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">Furni<span>Style</span></div>
+    <nav class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="category.html" class="nav-link">Explore Categories</a>
+    </nav>
+
+    <div class="user-authen">
+      <span id="logged-user"></span>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+      <a href="login.html" class="login">Login</a>
+      <a href="register.html" class="register">Register</a>
+    </div>
+
+    <!-- cart -->
+    <div class="cart cart-icon" onclick="toggleCart()">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <!-- Shop Header -->
+  <section class="shop-header">
+    <h1>Shopping</h1>
+    <p>Discover the best furniture for your home at affordable prices.</p>
+  </section>
+
+  <!-- Search + Filters -->
+  <section class="filters" style="text-align:center; margin: 20px;">
+    <input type="text" id="searchBar" placeholder="Search products..." style="padding:8px; width:250px; margin-right:10px;">
+    <label>Sort by: 
+      <select id="sortSelect">
+        <option value="default">Default</option>
+        <option value="priceLow">Price: Low to High</option>
+        <option value="priceHigh">Price: High to Low</option>
+      </select>
+    </label>
+  </section>
+
+  <!-- Product Grid -->
+  <main id="productGrid" class="product-grid"></main>
+
+  <!-- Pagination -->
+  <div class="pagination" id="pagination" style="text-align:center; margin: 20px;"></div>
+
+  <!-- Product Detail Modal -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <img id="modal-image" src="" alt="Product Image" style="width: 300px; height: 300px;" />
+
+      <div class="modal-info">
+        <h3 id="modal-title">Product Title</h3>
+        <p id="modal-description">Product description goes here.</p>
+        <p class="modal-price" id="modal-price">₹0.00</p>
+        <button class="btn-primary" id="modal-addcart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Panel -->
+  <div id="cart-panel" class="cart-panel">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="close-cart" onclick="toggleCart()">&times;</button>
+    </div>
+
+    <div id="cart-items" class="cart-items"></div>
+
+    <div class="cart-footer">
+      <p>Total: ₹<span id="cart-total">0</span></p>
+      <button class="btn-primary" onclick="checkoutpage()">Checkout</button>
+      <button class="btn-secondary" onclick="clearCart()">Clear Cart</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+   <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/shop.js"></script>
+  <script src="./assets/js/cart.js"></script>
+</body>
+
+</html>

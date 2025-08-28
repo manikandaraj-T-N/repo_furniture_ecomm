@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | FurniStyle</title>
+
+  <!-- css -->
+   <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/css/about.css">
+  <link rel="stylesheet" href="./assets/css/cart.css">
+</head>
+<body>
+  
+   <!-- Header -->
+  <header class="site-header">
+    <div class="logo">Furni<span>Style</span></div>
+    <nav class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="category.html" class="nav-link">Explore Categories</a>
+    </nav>
+
+<div class="user-authen">
+  <span id="logged-user"></span>
+  <button id="logoutBtn" class="logout-btn">Logout</button>
+  <a href="login.html" class="login">Login</a>
+  <a href="register.html" class="register">Register</a>
+</div>
+
+
+    <!-- cart -->
+    <div class="cart cart-icon" onclick="toggleCart()">
+  🛒 <span id="cart-count">0</span>
+</div>
+
+  </header>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container">
+      <h1>About FurniStyle</h1>
+      <p>
+        At <strong>FurniStyle</strong>, we believe that furniture is more than just a functional item — 
+        it’s an expression of comfort, style, and lifestyle. Since our founding, our mission has been 
+        to create premium-quality, affordable furniture that transforms houses into homes.
+      </p>
+
+      <div class="about-content">
+        <div class="about-image">
+          <img src="assets/images/about/about.jpg" alt="Modern Furniture">
+        </div>
+        <div class="about-text">
+          <h2>Our Story</h2>
+          <p>
+            Starting as a small workshop, FurniStyle has grown into a trusted furniture brand 
+            known for modern design and exceptional craftsmanship. We bring together innovation 
+            and tradition, offering a wide collection of sofas, chairs, tables, and more.
+          </p>
+
+          <h2>Our Mission</h2>
+          <p>
+            We aim to make every home beautiful and comfortable with furniture that reflects 
+            personality, blends with modern living, and lasts for years.
+          </p>
+
+          <h2>Why Choose Us?</h2>
+          <ul>
+            <li>✔ Premium quality and sustainable materials</li>
+            <li>✔ Affordable prices without compromising style</li>
+            <li>✔ Wide range of modern and classic collections</li>
+            <li>✔ Trusted by thousands of happy customers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Fantastic Furniture. All rights reserved.</p>
+  </footer>
+
+
+  <!-- Cart Panel -->
+<div id="cart-panel" class="cart-panel">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="close-cart" onclick="toggleCart()">&times;</button>
+  </div>
+
+  <div id="cart-items" class="cart-items"></div>
+
+  <div class="cart-footer">
+  <p>Total: $<span id="cart-total">0</span></p>
+  <button class="btn-primary">Checkout</button>
+  <button class="btn-secondary" onclick="clearCart()">Clear Cart</button>
+</div>
+
+</div>
+
+<!-- js -->
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/cart.js"></script>
+  
+</body>
+</html>

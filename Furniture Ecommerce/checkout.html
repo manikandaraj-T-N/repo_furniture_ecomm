@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | FurniStyle</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/css/checkout.css">
+</head>
+<body>
+  <header>
+    <h2>Checkout</h2>
+  </header>
+
+  <div class="shop-link"><a href="shop.html">Back to Shop</a></div>
+
+  <main class="checkout-container">
+    <!-- Billing Form -->
+<section class="billing">
+  <h3>Billing Details</h3>
+  <form id="checkoutForm">
+    <input type="text" id="furni_name" placeholder="Full Name" required>
+    <input type="email" id="furni_email" placeholder="Email" required>
+    <input type="tel" id="furni_phone" placeholder="Phone" required>
+    <textarea id="furni_address" placeholder="Address" required></textarea>
+    <input type="text" id="furni_city" placeholder="City" required>
+    <input type="text" id="furni_state" placeholder="State" required>
+    <input type="text" id="furni_zip" placeholder="Zip Code" required>
+  </form>
+</section>
+
+
+    <!-- Order Summary -->
+    <!-- Order Summary -->
+<section class="summary">
+  <h3>Order Summary</h3>
+  <ul id="orderItems">
+    <!-- dynamically load cart items -->
+  </ul>
+  <hr>
+  <p>Subtotal: <span id="subtotalAmt">₹0</span></p>
+<p>Shipping: <span>Free</span></p>
+<p><b>Total: <span id="totalAmt">₹0</span></b></p>
+
+  <!-- Payment -->
+  <div class="payment">
+    <h4>Payment Method</h4>
+    <label><input type="radio" name="payment" checked> Cash on Delivery</label>
+    <label><input type="radio" name="payment"> UPI / Card</label>
+  </div>
+
+  <button type="submit" form="checkoutForm" class="btn">Place Order</button>
+</section>
+
+  </main>
+
+
+  <!-- js -->
+   <script src="./assets/js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+.about-section {
+  padding: 50px 20px;
+  background: #fefefe;
+  margin-top: 5%;
+}
+
+.about-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 5%;
+}
+
+.about-image img {
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-text h2 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #444;
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-text ul li {
+  margin: 10px 0;
+  font-size: 1rem;
+}

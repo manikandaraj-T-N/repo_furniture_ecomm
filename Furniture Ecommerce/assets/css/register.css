@@ -1,0 +1,111 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFF3E3, #B88E2F);
+}
+
+.register-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  width: 400px;
+}
+
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #B88E2F;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form label {
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.register-form input {
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.register-form input:focus {
+  border-color: #B88E2F;
+}
+
+/* ✅ Apply to your <button> */
+.register-form button {
+  background: #B88E2F;
+  color: #fff;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-form button:hover {
+  background: #a37927;
+}
+
+/* ✅ Success & error messages */
+#register-message {
+  margin: 0.8rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+#register-message.success {
+  color: green;
+  font-weight: 500;
+}
+
+#register-message.error {
+  color: red;
+  font-weight: 500;
+}
+
+/* ✅ Footer links */
+.register-form p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.register-form a {
+  color: #B88E2F;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-form a:hover {
+  text-decoration: underline;
+}

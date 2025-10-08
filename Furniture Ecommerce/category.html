@@ -4,40 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Explore Categories - Furniture Store</title>
-  <link rel="stylesheet" href="./assets/css/category.css">
+
+<!-- css -->
+
+   
+    <link rel="stylesheet" href="./assets/css/index.css">
+     <link rel="stylesheet" href="./assets/css/cart.css">
+      <link rel="stylesheet" href="./assets/css/category.css">
+  <link rel="stylesheet" href="./assets/css/home.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Explore Categories</h1>
-    <p>Browse by category to find the furniture that matches your style.</p>
+    <!-- Header -->
+  <header class="site-header">
+    <div class="logo">Furni<span>Style</span></div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="category.html" class="nav-link">Explore Categories</a>
+    </nav>
+
+<div class="user-authen">
+  <span id="logged-user"></span>
+  <button id="logoutBtn" class="logout-btn">Logout</button>
+  <a href="login.html" class="login">Login</a>
+  <a href="register.html" class="register">Register</a>
+</div>
+
+
+    <!-- cart -->
+    <div class="cart cart-icon" onclick="toggleCart()">
+  🛒 <span id="cart-count">0</span>
+</div>
+
   </header>
 
+<br><br><br><br>
+      <h1>Explore Categories</h1>
+      <p>Browse by category to find the furniture that matches your style.</p>
+
+
   <!-- Category Grid -->
-  <main class="category-grid">
-    <div class="category">
-      <img src="./assets/images/sofas.jpg" alt="Sofas">
-      <h3>Sofas</h3>
-      <a href="shop.html?category=sofas" class="btn">Shop Now</a>
-    </div>
-    <div class="category">
-      <img src="./assets/images/beds.jpg" alt="Beds">
-      <h3>Beds</h3>
-      <a href="shop.html?category=beds" class="btn">Shop Now</a>
-    </div>
-    <div class="category">
-      <img src="./assets/images/chairs.jpg" alt="Chairs">
-      <h3>Chairs</h3>
-      <a href="shop.html?category=chairs" class="btn">Shop Now</a>
-    </div>
-    <div class="category">
-      <img src="./assets/images/tables.jpg" alt="Tables">
-      <h3>Tables</h3>
-      <a href="shop.html?category=tables" class="btn">Shop Now</a>
-    </div>
-    <!-- Add more categories -->
-  </main>
+ <main class="categories-grid">
+  <div class="category-card">
+    <img src="./assets/images/sofas.jpg" alt="Sofas">
+    <h3>Sofas</h3>
+    <a href="shop.html?category=sofas" class="btn">Shop Now</a>
+  </div>
+
+  <div class="category-card">
+    <img src="./assets/images/beds.jpg" alt="Beds">
+    <h3>Beds</h3>
+    <a href="shop.html?category=beds" class="btn">Shop Now</a>
+  </div>
+
+  <div class="category-card">
+    <img src="./assets/images/chair1.jpg" alt="Chairs">
+    <h3>Chairs</h3>
+    <a href="shop.html?category=chairs" class="btn">Shop Now</a>
+  </div>
+
+  <div class="category-card">
+    <img src="./assets/images/table.jpeg" alt="Tables">
+    <h3>Tables</h3>
+    <a href="shop.html?category=tables" class="btn">Shop Now</a>
+  </div>
+</main>
 
 
     <!-- Modal -->
@@ -51,5 +85,27 @@
   </div>
 </div> -->
 
+
+
+<!-- Cart Panel -->
+<div id="cart-panel" class="cart-panel">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="close-cart" onclick="toggleCart()">&times;</button>
+  </div>
+
+  <div id="cart-items" class="cart-items"></div>
+
+  <div class="cart-footer">
+  <p>Total: $<span id="cart-total">0</span></p>
+  <button class="btn-primary" onclick="checkoutpage()">Checkout</button>
+  <button class="btn-secondary" onclick="clearCart()">Clear Cart</button>
+</div>
+
+</div>
+
+ 
+  <script src="./assets/js/index.js"></script>
+   <script src="./assets/js/cart.js"></script>
 </body>
 </html>
